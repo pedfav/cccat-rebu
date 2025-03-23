@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 class SignUpController(
-        private val getAccountUseCase: GetAccountUseCase
+    private val getAccountUseCase: GetAccountUseCase
 ) {
 
     @PostMapping("/signup")

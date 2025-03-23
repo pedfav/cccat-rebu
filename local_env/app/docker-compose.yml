@@ -1,0 +1,18 @@
+services:
+  cccat-rebu:
+    container_name: cccat-rebu
+    build:
+      context: ../../
+      dockerfile: ../../DockerfileTest
+    ports:
+      - "${APP_PORT}:${APP_PORT}"
+    environment:
+      LOG_LEVEL: INFO
+      POSTGRES_PORT: ${POSTGRES_PORT}
+      APP_PORT: ${APP_PORT}
+      POSTGRES_URL: ${POSTGRES_URL}
+
+networks:
+  default:
+    external: true
+    name: ${LOCAL_NETWORK}

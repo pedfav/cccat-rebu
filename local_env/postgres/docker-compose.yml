@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    hostname: postgres-db
+    volumes:
+      - ./create.sql:/docker-entrypoint-initdb.d/create.sql
+    environment:
+      POSTGRES_PASSWORD: "rebu123"
+    ports:
+      - "${POSTGRES_PORT}:${POSTGRES_PORT}"
+
+networks:
+  default:
+    external: true
+    name: ${LOCAL_NETWORK}

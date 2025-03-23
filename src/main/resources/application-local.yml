@@ -1,0 +1,13 @@
+server:
+  port: 8081
+
+#spring:
+#  application:
+#    name: cccat-rebu
+#  datasource:
+#    platform: postgres
+#    driverClassName: org.postgresql.Driver
+#    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=cccarebu
+#    schema: cccarebu
+#    username: postgres
+#    password: rebu123
